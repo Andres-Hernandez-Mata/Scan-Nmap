@@ -15,7 +15,7 @@ end = 80
   
 # assign the target ip to be scanned to 
 # a variable 
-target = '148.234.5.206'#148.234.5.0/24
+target = '192.168.100.1'#148.234.5.0/24
    
 # instantiate a PortScanner object 
 scanner = nmap.PortScanner() 
@@ -33,6 +33,6 @@ for i in range(begin,end+1):
     # check if the port is opened or closed 
     # so we will access only that information  
     # in the dictionary 
-    res = res['scan'][target]['tcp'][i]['state'] 
+    res = res['scan'][target]['tcp'][i]['state']
    
     print(f'port {i} is {res}.')
